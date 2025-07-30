@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title> 
+    <meta name="description" content="Situs kami sedang dalam perbaikan dan akan segera kembali online.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Retry-After" content="3600">
+    <meta property="og:title" content="Under Maintenance">
+    <meta property="og:description" content="Situs kami sedang dalam perbaikan dan akan segera kembali online.">
+    <meta property="og:image" content="mt.gif">
+    <meta property="og:type" content="website">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .maintenance-image {
+            width: 120%; 
+            max-width: 1200px; 
+            height: auto;
+            margin-bottom: 0px;
+        }
+        .copyright {
+            font-size: 1.1em;
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="mt.gif" alt="Situs sedang dalam perbaikan" class="maintenance-image">
+    <p class="copyright" id="copyright-text"></p>
+    <script>
+        const copyrightElement = document.getElementById('copyright-text');
+        const currentYear = new Date().getFullYear();
+        const domainName = window.location.hostname || 'localhost';
+        document.title = `${domainName} - Under Maintenance`;
+        copyrightElement.textContent = `© ${currentYear} ${domainName} - All Rights Reserved.`;
+    </script>
+</body>
+</html>
