@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -42,6 +43,10 @@
             .maintenance-image {
             width: 120%;
             }
+            .copyright {
+            font-size: 15px;
+            color: #666;
+        }
         }
 
     </style>
@@ -54,7 +59,7 @@
         const currentYear = new Date().getFullYear();
         const domainName = window.location.hostname || 'localhost';
         document.title = `${domainName} - Under Maintenance`;
-        copyrightElement.textContent = `${domainName} © ${currentYear} - All Rights Reserved.`;
+	    copyrightElement.innerHTML = `Copyright &copy; 2025 ∙ ${domainName}<br>All rights reserved.`;
     </script>
 </body>
 </html>
